@@ -73,3 +73,8 @@ textarea {
 .saveBtn:hover {
   background-color:lightseagreen;
 }
+
+#currentDay{
+  font-weight: bold;
+  color: orangered;
+}
