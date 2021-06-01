@@ -3,20 +3,21 @@ var today = moment();
 $("#currentDay").text(today.format("dddd, MMMM Do"));
 
 var items = {
-    "1": [],
-    "2": [],
-    "3": [],
-    "4": [],
-    "5": [],
-    "6": [],
-    "7": [],
-    "8": [],
-    "9": []
+    "9": [],
+    "10": [],
+    "11": [],
+    "12": [],
+    "13": [],
+    "14": [],
+    "15": [],
+    "16": [],
+    "17": []
 };
 
 var setItems = function() {
     // store items in localStorage 
-    localStorage.setItems("items", JSON.stringify(item));
+    localStorage.setItems("items", JSON.stringify(items));
+    console.log(items);
 }
 
 var getItems = function() {
@@ -76,8 +77,8 @@ var replaceTextarea = function(textareaElement) {
     var text = itemsArea.val().trim();
 
     // persist information when the page is refreshed
-    item[time] = [text];  
-    setitems();
+    items[time] = [text];  
+    setItems();
 
  
     createitems(text, itemInfo);
