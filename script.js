@@ -16,7 +16,7 @@ var items = {
 
 var setItems = function() {
     // store items in localStorage 
-    localStorage.setItems("items", JSON.stringify(items));
+    localStorage.setItem("items", JSON.stringify(items));
     console.log(items);
 }
 
@@ -40,11 +40,11 @@ var getItems = function() {
 var createItems = function(itemsText, hourDiv) {
     
 
-    var itemDiv = hourDiv.find(".items");
-    var itemP = $("<p>")
+    var itemsDiv = hourDiv.find(".items");
+    var itemsP = $("<p>")
         .addClass("description")
         .text(itemsText)
-    itemDiv.html(itemsP);
+    itemsDiv.html(itemsP);
 }
 
 var auditItems = function() {
@@ -81,7 +81,7 @@ var replaceTextarea = function(textareaElement) {
     setItems();
 
  
-    createitems(text, itemInfo);
+    createItems(text, itemsInfo);
 }
 
 $(".items").click(function() {
